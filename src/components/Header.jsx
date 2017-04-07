@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
 import { Glyphicon } from 'react-bootstrap';
-import '../stylesheets/Header.css'
+import { Link } from 'react-router';
+import '../stylesheets/desktop-stylesheets/Header.css';
 
 class Header extends Component {
   render(){
     return(
       <div className="header-bar">
-        <div className="header-right">
-            <div className="right-button-group">
-              <Glyphicon glyph="map-marker" className="right-button-group-icon"></Glyphicon>
-            </div>
-            <div className="right-button-group">
-              <Glyphicon glyph="earphone" className="right-button-group-icon"></Glyphicon>
-            </div>
-            <div className="right-button-group">
-              <Glyphicon glyph="time" className="right-button-group-icon"></Glyphicon>
-            </div>
-        </div>
-        <div className="header-left">
-          <div className="left-button-group">
-            <Glyphicon glyph="search" className="left-button-group-icon"></Glyphicon>
+        <div className="header-left-button-group">
+          <div className="header-left-button">
+            <Glyphicon glyph="search" className="button-icon"></Glyphicon>
           </div>
+        </div>
+        <div className="header-right-button-group">
+            <div className="header-right-button">
+              <Link to={'/app'}><Glyphicon glyph="map-marker" className="button-icon"></Glyphicon></Link>
+            </div>
+            <div className="header-right-button">
+              <Link to={'/app'}><Glyphicon glyph="earphone" className="button-icon"></Glyphicon></Link>
+            </div>
+            <div className="header-right-button">
+              <Link to={'/app'}><Glyphicon glyph="time" className="button-icon"></Glyphicon></Link>
+            </div>
         </div>
       </div>
     )

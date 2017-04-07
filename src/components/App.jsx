@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { firebaseApp } from '../firebase';
-import AddGoal from './AddGoal';
-import GoalList from './GoalList';
-import CompleteGoalList from './CompleteGoalList';
 import Header from './Header';
+import Footer from './Footer';
+import CarDetail from './CarDetail';
 
 class App extends Component {
   signOut() {
@@ -15,20 +14,8 @@ class App extends Component {
     return (
       <div style={{margin: '5px'}}>
         <Header />
-        <AddGoal />
-        <hr />
-        <h4>Goals</h4>
-        <GoalList />
-        <hr />
-        <h4>Complete Goals</h4>
-        <CompleteGoalList />
-        <hr />
-        <button
-          className="btn btn-danger"
-          onClick={() => this.signOut()}
-        >
-          Sign Out
-        </button>
+        <CarDetail />
+        <Footer />
       </div>
     )
   }

@@ -1,0 +1,4 @@
+.footer-bar {
+  /* visibility: hidden; */
+  display: none !important; /*use display instead of visibility, since we want that unused space back on desktop version*/
+}

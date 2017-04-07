@@ -14,6 +14,7 @@ class GoalItem extends Component {
 
   render() {
     const { email, title } = this.props.goal;
+    console.log('this.state.user', this.state.user);
     return (
       <div style={{margin: '5px'}}>
         <strong>{title}</strong>
