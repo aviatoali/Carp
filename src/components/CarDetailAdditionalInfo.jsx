@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../stylesheets/desktop-stylesheets/CarDetailAdditionalInfo.css';
+import '../stylesheets/WebTask.css';
 
 class CarDetailAdditionalInfo extends Component{
   render(){
@@ -43,7 +43,7 @@ class CarDetailAdditionalInfo extends Component{
           </div>
         </div>
         <div className="performance-section">
-          <div className="performance-section-title">
+          <div className="performance-section-heading">
             PERFORMANCE
           </div>
           <div className="performance-section-row">

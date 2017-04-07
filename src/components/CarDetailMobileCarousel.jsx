@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from 'nuka-carousel';
+import '../stylesheets/WebTask.css';
 
 class CarDetailMobileCarousel extends Component {
 

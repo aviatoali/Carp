@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Glyphicon } from 'react-bootstrap';
 import { Link } from 'react-router';
-import '../stylesheets/desktop-stylesheets/Header.css';
+import '../stylesheets/WebTask.css';
 
 class Header extends Component {
   render(){
@@ -19,7 +19,7 @@ class Header extends Component {
             <div className="header-right-button">
               <Link to={'/app'}><Glyphicon glyph="earphone" className="button-icon"></Glyphicon></Link>
             </div>
-            <div className="header-right-button">
+            <div className="header-right-button" id="clock-icon-div">
               <Link to={'/app'}><Glyphicon glyph="time" className="button-icon"></Glyphicon></Link>
             </div>
         </div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { firebaseApp } from '../firebase';
 
+
 class SignIn extends Component {
   constructor(props) {
     super(props);

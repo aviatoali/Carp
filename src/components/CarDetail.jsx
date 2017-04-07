@@ -3,7 +3,7 @@ import CarDetailSummary from './CarDetailSummary';
 import CarDetailMobileCarousel from './CarDetailMobileCarousel';
 import CarDetailAdditionalInfo from './CarDetailAdditionalInfo';
 import CarDetailDesktopGallery from './CarDetailDesktopGallery';
-import '../stylesheets/desktop-stylesheets/CarDetail.css';
+import '../stylesheets/WebTask.css';
 
 class CarDetail extends Component{
   constructor(props){

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../stylesheets/WebTask.css';
 
 class CarDetailDesktopGallery extends Component {
   render() {

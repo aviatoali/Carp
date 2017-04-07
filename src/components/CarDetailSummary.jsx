@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Glyphicon } from 'react-bootstrap';
 import { Link } from 'react-router';
+import '../stylesheets/WebTask.css';
 
 class CarDetailSummary extends Component{
   render(){
