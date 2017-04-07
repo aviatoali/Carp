@@ -10,8 +10,4 @@ const config = {
   };
 
 export const firebaseApp = firebase.initializeApp(config);
-export const carRef = firebase.database().ref('cars');
-export const carImageRef = firebase.database().ref('carPictures');
-
-export const goalRef = firebase.database().ref('goals');
-export const completeGoalRef = firebase.database().ref('completeGoals');
+export const carRef = firebase.database().ref('cars/car');

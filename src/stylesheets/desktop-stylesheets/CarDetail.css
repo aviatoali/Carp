@@ -1,0 +1,23 @@
+.main-image {
+  height: 432px;
+  width: 728px;
+  float: left;
+}
+
+.middle-block {
+  background-color: #EFEFF2;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.call-bar-mobile {
+  height: 50px;
+  width: 100%;
+  font-wieght: 900;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  background-color: #3FB34A
+  display: none;
+}

@@ -1,43 +1,43 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { carRef } from '../firebase';
-import { setCarDetail } from '../actions';
+import CarDetailSummary from './CarDetailSummary';
+import CarDetailMobileCarousel from './CarDetailMobileCarousel';
+import CarDetailAdditionalInfo from './CarDetailAdditionalInfo';
+import CarDetailDesktopGallery from './CarDetailDesktopGallery';
+import '../stylesheets/desktop-stylesheets/CarDetail.css';
 
 class CarDetail extends Component{
-
-  componentWillMount(){
-      carRef.on('value', snap => {
-        let cars = [];
-        snap.forEach(car => {
-          const { cityMpg, cylinders, engine, highwayMpg, id, itemNumber, maximumPrice, minimumPrice, name, saves, shares, views, vinNumber, year } = car.val();
-          cars.push( {cityMpg, cylinders, engine, highwayMpg, id, itemNumber, maximumPrice, minimumPrice, name, saves, shares, views, vinNumber, year } )
-        })
-        this.props.setCarDetail(cars);
-      })
+  constructor(props){
+    super(props);
+    this.state = {
+      imageNum: 'One',
+    };
   }
+
+  swapMainImage(num){
+    this.setState({imageNum: num.toLocaleString()})
+  }
+
   render(){
-    console.log('this.props.cars', this.props.cars);
     return(
       <div>
-        <div>
-          Top Half
-        </div>
-        <div>
-          Middle Photo Area
-        </div>
-        <div>
-          Bottom Half
+        <img className='main-image' src={"../images/fiat" + this.state.imageNum + ".jpg"} />
+        <CarDetailMobileCarousel carDesc={ this.props.carDesc } />
+        <CarDetailSummary
+            carDesc={ this.props.carDesc }
+        />
+        <div className='middle-block'>
+          <div className="call-bar-mobile">CALL US</div>
+          <CarDetailDesktopGallery
+            carDesc={ this.props.carDesc}
+            swapMainImage= { this.swapMainImage.bind(this) }
+          />
+          <CarDetailAdditionalInfo
+            carDesc={this.props.carDesc}
+          />
         </div>
       </div>
     )
   }
 }
 
-function mapStateToProps(state) {
-  const { cars } = state;
-  return{
-    cars
-  }
-}
-
-export default connect(mapStateToProps, { setCarDetail })(CarDetail);
+export default CarDetail;
