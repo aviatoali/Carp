@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div style={{margin: '5px'}}>
-        <h3>Goal Coach</h3>
+        <Header />
         <AddGoal />
         <hr />
         <h4>Goals</h4>
