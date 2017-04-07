@@ -11,12 +11,12 @@ https://secret-chamber-82310.herokuapp.com/app
 ```
 
 ###Want to run it yourself locally? No worries! Simply:
-1.) Clone the repository into a local directory.
-2.) Navigate to said directory on the command line, and at the root type:
+1. Clone the repository into a local directory.
+1. Navigate to said directory on the command line, and at the root type:
       ```
       npm install
       ```
-3.) Once it's done installing all the necessary dependencies, simply enter the command:
+1. Once it's done installing all the necessary dependencies, simply enter the command:
       ```
       npm start
       ```
