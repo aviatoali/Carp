@@ -4,6 +4,7 @@ import { firebaseApp } from '../firebase';
 import AddGoal from './AddGoal';
 import GoalList from './GoalList';
 import CompleteGoalList from './CompleteGoalList';
+import Header from './Header';
 
 class App extends Component {
   signOut() {
