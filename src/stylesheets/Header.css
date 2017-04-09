@@ -1,0 +1,44 @@
+.header-bar {
+  height: 56px;
+  width: 100%;
+  background: linear-gradient(to right, #000000 60%, #F88200 40%);
+  text-align:center;
+}
+
+.header-left-links {
+  height: 100%;
+  width: 80%;
+  background-color: #000000;
+  float: left;
+  transform: skewX(-15deg);
+}
+
+.left-link {
+  margin-right: 5%;
+  float:right;
+}
+
+.header-right-links {
+  height: 100%;
+  width: 20%;
+  background-color: #F88200;
+  float: right;
+}
+
+.right-link {
+  display: inline-block;
+  width: 32%;
+  transform: skewX(-15deg);
+}
+
+.right-link:not(:last-child){
+  border-right: 1px solid #FFFFFF;
+}
+
+.link-icon {
+  color: #FFFFFF;
+  font-size: 16px;
+  padding-top: 24px;
+  padding-bottom: 16px;
+  transform: skewX(15deg);
+}

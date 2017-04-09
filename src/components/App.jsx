@@ -1,43 +1,46 @@
 import React, { Component } from 'react';
-import { firebaseApp } from '../firebase';
 import Header from './Header';
-import Footer from './Footer';
 import CarDetail from './CarDetail';
-import { carRef } from '../firebase';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      carDesc: {},
-    };
-  }
-  componentWillMount() {
-      carRef.once("value", function(snapshot){
-      this.setState({ carDesc: snapshot.val()});
-    }.bind(this));
-  }
-
-  signOut() {
-    firebaseApp.auth().signOut();
-  }
-
-  waitForData(){
-    if(Object.keys(this.state.carDesc).length === 0) {
-      return(null)
-    } else {
-      return(
-        <CarDetail carDesc={this.state.carDesc} />
-      )
+      carInfo: {}
     }
   }
 
+  componentWillMount() {
+    this.setState({
+      carInfo: {id: 1,
+                pageViews: 20,
+                name: 'Fiat Abarth',
+                year: 2017,
+                mileage: 1000,
+                priceMin: '8,500',
+                price_max: '9,000',
+                vinNumber: '3GNDA13D96S631406',
+                itemNumber: '1395P',
+                cylinders: 'L4',
+                cityMpg: 20,
+                highwayMpg: 25,
+                engine: 1.3,
+                color: 'blue',
+                doors: 2,
+                seating: 2,
+                condition: 'good',
+                imageId: 1,
+                shares: 14,
+                saves: 7
+              }
+    })
+  }
   render() {
+      console.log('this.state.carInfo', this.state.carInfo);
     return (
-      <div style={{margin: '5px'}}>
+      <div>
         <Header />
-        {this.waitForData()}
-        <Footer />
+        <CarDetail carInfo={this.state.carInfo} />
       </div>
     )
   }

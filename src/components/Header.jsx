@@ -1,26 +1,53 @@
 import React, { Component } from 'react';
 import { Glyphicon } from 'react-bootstrap';
 import { Link } from 'react-router';
-import '../stylesheets/WebTask.css';
+import '../stylesheets/Header.css';
 
 class Header extends Component {
   render(){
     return(
       <div className="header-bar">
-        <div className="header-left-button-group">
-          <div className="header-left-button">
-            <Glyphicon glyph="search" className="button-icon"></Glyphicon>
+        <div className="header-left-links">
+          <div className="left-link">
+            <Link to={'/app'}>
+              <Glyphicon
+                glyph="search"
+                className="link-icon"
+              >
+              </Glyphicon>
+            </Link>
           </div>
         </div>
-        <div className="header-right-button-group">
-            <div className="header-right-button">
-              <Link to={'/app'}><Glyphicon glyph="map-marker" className="button-icon"></Glyphicon></Link>
+        <div className="header-right-links">
+            <div className="right-link">
+              <Link to={'/app'}>
+                <Glyphicon
+                   glyph="map-marker"
+                   className="link-icon"
+                >
+                </Glyphicon>
+              </Link>
             </div>
-            <div className="header-right-button">
-              <Link to={'/app'}><Glyphicon glyph="earphone" className="button-icon"></Glyphicon></Link>
+            <div className="right-link">
+              <Link to={'/app'}>
+                <Glyphicon
+                  glyph="earphone"
+                  className="link-icon"
+                >
+                </Glyphicon>
+              </Link>
             </div>
-            <div className="header-right-button" id="clock-icon-div">
-              <Link to={'/app'}><Glyphicon glyph="time" className="button-icon"></Glyphicon></Link>
+            <div
+              className="right-link"
+              id="clock-icon-div"
+            >
+              <Link to={'/app'}>
+                <Glyphicon
+                  glyph="time"
+                  className="link-icon"
+                  >
+                </Glyphicon>
+              </Link>
             </div>
         </div>
       </div>

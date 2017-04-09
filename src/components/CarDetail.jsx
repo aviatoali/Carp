@@ -1,38 +1,24 @@
 import React, { Component } from 'react';
-import CarDetailSummary from './CarDetailSummary';
-import CarDetailMobileCarousel from './CarDetailMobileCarousel';
-import CarDetailAdditionalInfo from './CarDetailAdditionalInfo';
-import CarDetailDesktopGallery from './CarDetailDesktopGallery';
-import '../stylesheets/WebTask.css';
+import CarDetailUpperInfo from './CarDetailUpperInfo';
+import '../stylesheets/CarDetail.css';
 
-class CarDetail extends Component{
-  constructor(props){
+class CarDetail extends Component {
+  constructor(props) {
     super(props);
     this.state = {
-      imageNum: 'One',
-    };
+      imageId: 1
+    }
+    console.log('this.props.carInfo', this.props.carInfo);
   }
 
-  swapMainImage(num){
-    this.setState({imageNum: num.toLocaleString()})
-  }
-
-  render(){
-    return(
+  render() {
+    return (
       <div>
-        <img className='main-image' src={"../images/fiat" + this.state.imageNum + ".jpg"} />
-        <CarDetailMobileCarousel carDesc={ this.props.carDesc } />
-        <CarDetailSummary
-            carDesc={ this.props.carDesc }
-        />
-        <div className='middle-block'>
-          <div className="call-bar-mobile">CALL US</div>
-          <CarDetailDesktopGallery
-            carDesc={ this.props.carDesc}
-            swapMainImage= { this.swapMainImage.bind(this) }
-          />
-          <CarDetailAdditionalInfo
-            carDesc={this.props.carDesc}
+        <div className="upper-section">
+          <img className="main-Image" src={require("../images/fiat" + this.state.imageId + ".png")} />
+          <CarDetailUpperInfo
+            imageId={this.state.imageId}
+            carInfo={ this.props.carInfo }
           />
         </div>
       </div>
