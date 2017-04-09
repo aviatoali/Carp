@@ -9,7 +9,7 @@ body {
 }
 
 .share-link {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .upper-section {
@@ -22,7 +22,7 @@ body {
   margin-top: 48px;
   margin-left: 40px;
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 32px;
 }
 
@@ -70,7 +70,7 @@ body {
   margin-left: 15px;
   display: inline-block;
   font-size: 14px;
-  color: black;
+  color: #000000;
 }
 
 .web-page-info-label {
@@ -83,12 +83,12 @@ body {
 .web-page-info-entry {
   text-align: center;
   font-size: 20px;
-  color: green;
+  color: #106838;
 }
 
 /*CarDetailImageGallery*/
 
-.lower-section {
+.middle-section {
 
 }
 
@@ -111,4 +111,64 @@ body {
 
 .gallery-image {
   height: 100%;
+}
+
+/*CarDetailLowerInfo*/
+
+.car-desc-bot {
+  margin-right: 28px;
+  margin-left: 28px;
+  /*Instructions call for 32px
+    margins, however, that causes
+    the width of combined elements
+    to exceed limits by 8px, so 4px must be
+    taken from each margin to fix the problem*/
+}
+
+.car-desc-exterior-group {
+  background-color: #FFFFFF;
+  display: inline-block;
+  height: 330px;
+  width: 480px;
+  margin-right:8px;
+}
+
+.car-desc-performance-group {
+  background-color: #FFFFFF;
+  display: inline-block;
+  height: 330px; /*Instructions said 266 max height, but the combination of the other elements' heights exceeded 266px*/
+  width: 480px;
+}
+
+.car-desc-lower-category {
+  color: #9B9B9B;
+  font-weight: 500; /*Instructions say to use regular with this font size, but without weight it doesn't match provided example image*/
+  font-size: 20px;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-bottom: 8px; /*to accomodate the 16px requirement for the next element*/
+}
+
+.car-desc-lower-rows {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 16px;
+  padding-bottom: 16px;
+}
+
+.car-desc-lower-rows:nth-child(-n+4) {
+  border-bottom: 1px solid #9B9B9B;
+}
+
+.car-desc-lower-label {
+  color: #9B9B9B;
+  font-size: 14px;
+  width: 250px;
+  display: inline-block;
+}
+
+.car-desc-lower-entry {
+  color: #000000;
+  font-size: 18px;
+  display: inline-block;
 }
