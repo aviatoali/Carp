@@ -5,7 +5,6 @@ import '../stylesheets/CarDetail.css';
 
 class CarDetailUpperInfo extends Component {
   render() {
-      console.log("this.props.carInfo.princeMin", this.props.carInfo.priceMin);
     return (
       <div className="car-desc-top">
         <div className="car-name"> Ford Focus </div>
