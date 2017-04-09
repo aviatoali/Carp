@@ -149,6 +149,10 @@ body {
   margin-bottom: 8px; /*to accomodate the 16px requirement for the next element*/
 }
 
+.safety-star {
+  color: #E5FE04;
+}
+
 .car-desc-lower-rows {
   margin-left: 40px;
   margin-right: 40px;

@@ -20,15 +20,15 @@ class CarDetail extends Component {
     return (
       <div>
         <div className="upper-section">
-          <img className="main-Image" src={require("../images/fiat" + this.state.imageId + ".png")} alt="Main carPic"/>
+          <img className="main-Image" src={require(`../images/fiat${this.state.imageId}.png`)} alt="Main carPic"/>
           <CarDetailUpperInfo
             imageId={ this.state.imageId }
-            carInfo={ this.props.carDesc }
+            carDesc={ this.props.carDesc }
           />
         </div>
         <div className="middle-section">
           <CarDetailImageGallery
-              carInfo={ this.props.carDesc }
+              carDesc={ this.props.carDesc }
               swapMainImage={ this.swapMainImage.bind(this) }
            />
         </div>
@@ -38,7 +38,7 @@ class CarDetail extends Component {
           />
         </div>
       </div>
-    )
+    );
   }
 }
 
