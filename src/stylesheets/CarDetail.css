@@ -1,5 +1,6 @@
 body {
   font: "Helvetica Neue";
+  background-color: #EFEFF2;
 }
 
 .main-Image {
@@ -43,7 +44,7 @@ body {
 .car-desc-info-entry {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 16px; /*Come back to this. Causing data table to extend past pic*/
+  margin-bottom: 16px;
 }
 
 .car-desc-item-number {
@@ -72,8 +73,6 @@ body {
   color: black;
 }
 
-
-
 .web-page-info-label {
   display: inline-block;
   margin-right: 30px;
@@ -81,9 +80,35 @@ body {
   font-size: 14px;
 }
 
-
 .web-page-info-entry {
   text-align: center;
   font-size: 20px;
   color: green;
+}
+
+/*CarDetailImageGallery*/
+
+.lower-section {
+
+}
+
+.gallery-bar {
+  padding-top: 32px;
+  display: inline-block;
+  padding-bottom: 24px;
+}
+
+.gallery-bar-frame {
+  height: 200px;
+  width: 169px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.gallery-bar-frame:nth-child(-n+5) {
+  margin-right: 2px;
+}
+
+.gallery-image {
+  height: 100%;
 }

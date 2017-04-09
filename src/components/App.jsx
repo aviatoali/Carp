@@ -6,13 +6,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      carInfo: {}
+      carDesc: {}
     }
   }
 
   componentWillMount() {
     this.setState({
-      carInfo: {id: 1,
+      carDesc: {id: 1,
                 pageViews: 20,
                 name: 'Fiat Abarth',
                 year: 2017,
@@ -36,11 +36,11 @@ class App extends Component {
     })
   }
   render() {
-      console.log('this.state.carInfo', this.state.carInfo);
     return (
       <div>
         <Header />
-        <CarDetail carInfo={this.state.carInfo} />
+        <CarDetail carInfo={this.state.carDesc} />
+
       </div>
     )
   }
