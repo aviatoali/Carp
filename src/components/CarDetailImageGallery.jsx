@@ -14,7 +14,8 @@ class CarDetailImageGallery extends Component {
           <img
             className="gallery-image"
             src={this.props.carDesc.imageLink1}
-            alt="carPic 1"/>
+            alt="carPic 1"
+          />
         </div>
         <div
           className="gallery-bar-frame"

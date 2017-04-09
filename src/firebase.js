@@ -10,4 +10,5 @@ var config = {
 };
 
 export const firebaseApp = firebase.initializeApp(config);
-export const firebaseRef = firebase.database().ref('');
+export const carRef = firebase.database().ref('cars');
+export const uploadRef = firebase.database().ref('cars');
