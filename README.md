@@ -1,5 +1,5 @@
 # WebTask
-A week-long challenge and educational experience, provided by TangoCode, to learn React JS and replicate the form and function outlined through screenshots of an existing web responsive application. The database behind it all is Firebase. There's a very small set of data that doesn't really need a backend, but for demonstration purposes it's hooked up and the app is pulling down all vehicle data from it.
+A week-long challenge and educational experience, provided by TangoCode, to learn React JS and replicate the form and function outlined through screenshots of an existing web responsive application. The database behind it all is Firebase. There's a very small set of data that doesn't really need a backend, but for demonstration purposes it's hooked up and the app is pulling down all vehicle data from it. Also note that if you're in chrome and are using its built-in dev tools to emulate a mobile screen, once the app loads, simply zoom out to regular distance. For some reason when you toggle mobile display on Chrome it starts auto-zoomed in. Once you go back to the regular distance it's all fine from there, though.
 
 ## Getting started
 The web app is up on Heroku, so if you'd like to check the app out on your mobile devices, just head over to the following link:
