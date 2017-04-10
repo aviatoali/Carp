@@ -39,7 +39,7 @@ class Header extends Component {
             </div>
             <div
               className="right-link"
-              id="clock-icon-div"
+              id="clock-link"
             >
               <Link to={'/app'}>
                 <Glyphicon
@@ -51,7 +51,7 @@ class Header extends Component {
             </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

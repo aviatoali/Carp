@@ -1,7 +1,7 @@
 body {
   font: "Helvetica Neue";
   background-color: #EFEFF2;
-  padding: 0;
+  padding: 0px;
   width: 1024px;
   margin: auto;
 }
@@ -88,7 +88,7 @@ body {
 .web-page-info-entry {
   text-align: center;
   font-size: 20px;
-  color: #106838;
+  color: #3FB34A;
   margin: 0;
 }
 
@@ -99,15 +99,17 @@ body {
   padding-bottom: 24px;
 }
 
-.call-button-mobile {
-  display: none;
+.call-us-button {
   height: 50px;
   width: 100%;
   font-weight: 700px;
-  font-size: 36px;
+  font-size: 20px;
   text-align: center;
   color: #FFFFFF;
   background-color: #3FB34A;
+  border-radius: 0;
+  margin-top: 180px;
+  display: none;
 }
 
 .gallery-bar {
@@ -195,14 +197,18 @@ body {
   display: none;
 }
 
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
+/*To-Do: Add more stylings or common phone sizes*/
+
+/*Targeting Samsung Galaxy S5 & S6 Will add more if deadline permits*/
+@media screen
+  and (max-width: 360px)
+  and (max-height: 640px)
+  and (-webkit-device-pixel-ratio: 3){
+
     body {
       width: 100%;
-      margin: 0;
+      margin:0px auto;
+      background-color: #FFFFFF;
     }
 
     .main-Image {
@@ -213,115 +219,164 @@ body {
       display: none;
     }
 
-    .call-button {
-      display: block;
-    }
 
     .car-desc-top {
+      margin-bottom: 0px;
       width: 100%;
-      margin-bottom: 0;
+    }
+
+    .car-name {
+      font-size: 36px;
+      margin:0;
+      margin-left: 30px;
+      margin-bottom: 16px;
+      margin-top: 32px;
     }
 
     .car-desc-info-table {
       display: inline-block;
-      width:45%;
-    }
-
-    .car-desc-info-table-lower {
-      width:45%;
-      display: inline-block;
-    }
-
-    .car-name {
-      font-weight: 700;
-      font-size: 60px;
-      margin-top: 32px;
-      /*margin-bottom: 32px;  specs asked for 32px */
+      width: 48%;
+      margin: 0px;
+      padding: 0px;
     }
 
     .car-desc-info-label {
-      color: #9B9B9B;
-      margin-top: 0px;
+      margin:0;
+      padding:0;
       margin-bottom: 8px;
-      font-size: 24px;
-      font-weight: 500;
+      font-size: 14px;
+      padding-left: 30px;
+    }
+
+    #item-num {
+      padding:0px;
+      margin: 0px;
+      font-size: 14px;
+    }
+    #vin-num {
+      padding:0px;
+      margin:0px;
+      font-size: 14px;
+      padding-top:9px;
     }
 
     .car-desc-info-entry {
-      margin-top: 0px;
-      margin-bottom: 10px;
-      font-size: 32px;
-      font-weight: 700;
+      margin:0px;
+      padding: 0px;
+      padding-bottom: 14px;
+      padding-left: 30px;
+      font-size: 20px;
+      font-weight: normal;
     }
 
+    .car-desc-info-table-lower {
+      margin-left:0px;
+      margin-right:0px;
+      padding-right: 0px;
+      width:52%;
+      display: inline-block;
+      padding-left: 24px;
+    }
 
     .web-page-info-entry {
-      color: #106838;
-      font-size: 36px;
-      font-weight: 700;
-      margin: 0;
+      color: #3FB34A;
+      font-size: 16px;
+      margin: 0px;
+      padding: 0px;
       text-align: center;
     }
 
+
     .car-desc-share-section {
-      width: 220px;
-      margin-top: 24px;
+      margin: 0px;
+      padding-top: 24px;
     }
 
     .car-desc-share-label {
       display: inline-block;
-      font-size: 28px;
+      font-size: 14px;
       font-weight: 500;
-      margin: 0;
+      margin: 0px;
+      margin-right: 4px;
     }
 
-    .call-button-mobile {
-      display: block;
+    .share-link {
+      display: inline-block;
+      margin: 0px;
+      padding: 0px;
     }
 
+    #views {
+      float: left;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #saves {
+      display: none;
+    }
+
+    #savesEntry {
+      display: none;
+    }
+
+    #shares {
+      display: none;
+    }
+
+    #sharesEntry {
+      display: none;
+    }
+
+/*
     .car-desc-bot {
-      margin-right: 0px;
-      margin-left: 0px;
-      margin-top: 24px;
+      margin: 0px;
     }
+*/
+
     .car-desc-lower-group {
       margin-right: 0px;
-      padding-bottom: 40px;
-      height: auto;
+      margin-left: 0px;
+      padding-right: 0px;
+      margin-bottom: 0px;
       width:100%;
     }
 
-    .car-desc-lower-group:not(:last-child){
-      margin-bottom: 16px;
+    .car-desc-lower-category {
+      color: #9B9B9B;
+      font-size: 20px;
+      font-weight: 700;
+      margin-left:0px;
+      margin-right:0px;
     }
 
-    .car-desc-lower-category {
-      color: #343434;
-      font-size: 48px;
-      font-weight: 700;
-      margin-top: 40px;
-      margin-bottom: 8px;
-      margin-left: 40px;
+    .car-desc-lower-rows {
+      margin-right:0px;
+      margin-left: 0px;
+      width: 330px;
     }
 
     .car-desc-lower-label {
       color: #343434;
-      font-size: 32px;
-      font-weight: 500;
-      width: 230px;
+      font-size: 16px;
       display: inline-block;
+      margin:0px;
+      padding:0px;
     }
 
     .car-desc-lower-entry {
       color: #000000;
-      margin-left: 45%;
-      font-size: 36px;
-      font-weight: 500;
+      font-size: 16px;
       display: inline-block;
+      margin: 0px;
+      padding: 0px;
     }
 
     .mobile-image-scroller {
-      display: inline-block;
+      display: inline-block
     }
 
+    .call-us-button {
+      display: inline-block;
+    }
 }

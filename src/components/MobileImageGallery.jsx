@@ -13,7 +13,7 @@ class MobileImageGallery extends Component {
           <div>
             <img
               src={this.props.carDesc.imageLink1}
-              alt="carPic 1"
+              alt={"carPic 1"}
             />
           </div>
           <div>

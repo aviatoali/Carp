@@ -17,8 +17,8 @@ class CarDetailUpperInfo extends Component {
           <div className="car-desc-info-entry" id='car-desc-info-mileage'> { `${ this.props.carDesc.mileage } miles` } </div>
         </div>
         <div className="car-desc-info-table-lower">
-            <div className="car-desc-info-label"> { `Item Number: #${ this.props.carDesc.itemNumber }` }  </div>
-            <div className="car-desc-info-label"> { `VIN: ${ this.props.carDesc.vinNumber }` } </div>
+            <div className="car-desc-info-label" id='item-num'> { `Item Number: #${ this.props.carDesc.itemNumber }` }  </div>
+            <div className="car-desc-info-label" id='vin-num'> { `VIN: ${ this.props.carDesc.vinNumber }` } </div>
             <div className="car-desc-share-section">
               <div className="car-desc-share-label"> Share this car  </div>
               <Link to={'/app'}>
@@ -31,16 +31,16 @@ class CarDetailUpperInfo extends Component {
             </div>
             <div className="web-page-info-table">
               <div className="web-page-info">
-                <div className="car-desc-info-label"> Views </div>
+                <div className="car-desc-info-label" id='views'> Views </div>
                 <div className='web-page-info-entry'> { this.props.carDesc.pageViews } </div>
               </div>
               <div className="web-page-info">
-                <div className="car-desc-info-label"> Saves </div>
-                <div className="web-page-info-entry"> { this.props.carDesc.pageSaves } </div>
+                <div className="car-desc-info-label" id='saves'> Saves </div>
+                <div className="web-page-info-entry" id= 'savesEntry'> { this.props.carDesc.pageSaves } </div>
               </div>
               <div className="web-page-info">
-                <div className="car-desc-info-label"> Shares </div>
-                <div className="web-page-info-entry"> { this.props.carDesc.pageShares } </div>
+                <div className="car-desc-info-label" id='shares'> Shares </div>
+                <div className="web-page-info-entry" id='sharesEntry'> { this.props.carDesc.pageShares } </div>
               </div>
             </div>
           </div>

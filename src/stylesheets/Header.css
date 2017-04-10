@@ -1,12 +1,13 @@
 body {
   padding: 0;
-  margin: auto;
+  margin:0 auto;
 }
 .header-bar {
   height: 56px;
   width: 100%;
   background: linear-gradient(to right, #000000 60%, #F88200 40%);
   text-align:center;
+  overflow:hidden;
 }
 
 .header-left-links {
@@ -47,37 +48,46 @@ body {
   transform: skewX(15deg);
 }
 
+/*To-Do: Add more stylings or common phone sizes*/
 
+/*Targeting Samsung Galaxy S5 & S6 Will add more if deadline permits*/
+@media screen
+  and (max-width: 360px)
+  and (max-height: 640px)
+  and (-webkit-device-pixel-ratio: 3){
 
-
-/* MOBILE */
-/* ----------- iPhone 6 ----------- */
-
-/* Portrait */
-
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 667px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) {
     body {
       width: 100%;
-      margin: 0;
+      margin:0px auto;
+      background-color: #FFFFFF;
+    }
+
+    body {
+      width: 100%;
+      margin:0 auto;
     }
 
     #clock-link {
-      display: none;
+      display: none
     }
 
-    .right-link:nth-child(n+2) {
-      border-right: none;
+    .header-left-links {
+      width: 70%;
     }
 
     .left-link {
       display: none;
     }
+
+    .header-right-links {
+      width: 30%;
+    }
+
     .right-link {
       width: 49%;
     }
 
+    .right-link:nth-child(n+2) {
+      border-right: none;
+    }
 }

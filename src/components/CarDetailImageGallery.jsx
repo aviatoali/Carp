@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import '../stylesheets/CarDetail.css';
 
 class CarDetailImageGallery extends Component {
+
   render(){
     return(
       <div className="gallery-bar">
         <div
           className="gallery-bar-frame"
-          onClick={this.props.swapMainImage.bind(this, 1)}
+          onClick={this.props.swapMainImage.bind(this, 0)}
         >
           <img
             className="gallery-image"
@@ -17,7 +18,7 @@ class CarDetailImageGallery extends Component {
         </div>
         <div
           className="gallery-bar-frame"
-          onClick={this.props.swapMainImage.bind(this, 2)}
+          onClick={this.props.swapMainImage.bind(this, 1)}
         >
           <img
             className="gallery-image"
@@ -27,7 +28,7 @@ class CarDetailImageGallery extends Component {
         </div>
         <div
           className="gallery-bar-frame"
-          onClick={this.props.swapMainImage.bind(this, 3)}
+          onClick={this.props.swapMainImage.bind(this, 2)}
         >
           <img
             className="gallery-image"
@@ -37,7 +38,7 @@ class CarDetailImageGallery extends Component {
         </div>
         <div
           className="gallery-bar-frame"
-          onClick={this.props.swapMainImage.bind(this, 4)}>
+          onClick={this.props.swapMainImage.bind(this, 3)}>
           <img
             className="gallery-image"
             src={this.props.carDesc.imageLink4}
@@ -46,7 +47,7 @@ class CarDetailImageGallery extends Component {
         </div>
         <div
           className="gallery-bar-frame"
-          onClick={this.props.swapMainImage.bind(this, 5)}>
+          onClick={this.props.swapMainImage.bind(this, 4)}>
           <img
             className="gallery-image"
             src={this.props.carDesc.imageLink5}
@@ -55,7 +56,7 @@ class CarDetailImageGallery extends Component {
         </div>
         <div
           className="gallery-bar-frame"
-          onClick={this.props.swapMainImage.bind(this, 6)}
+          onClick={this.props.swapMainImage.bind(this, 5)}
           >
           <img
             className="gallery-image"

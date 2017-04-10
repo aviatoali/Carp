@@ -3,7 +3,6 @@ import { firebaseApp, carRef, uploadRef } from '../firebase';
 import Header from './Header';
 import CarDetail from './CarDetail';
 import Footer from './Footer';
-import '../stylesheets/App.css';
 
 firebaseApp.auth().signInWithEmailAndPassword("admin@mail.com", "admin1");
 
@@ -47,7 +46,6 @@ class App extends Component {
         const { name, year, minPrice, maxPrice, mileage, itemNumber, vinNumber, pageViews, pageShares, pageSaves, safetyRating, paint, condition, auxPort, cylinders, cityMpg, highwayMpg, engine, imageLink1, imageLink2, imageLink3, imageLink4, imageLink5, imageLink6 } = car.val();
         cars.push({ name, year, minPrice, maxPrice, mileage, itemNumber, vinNumber, pageViews, pageShares, pageSaves, safetyRating, paint, condition, auxPort, cylinders, cityMpg, highwayMpg, engine, imageLink1, imageLink2, imageLink3, imageLink4, imageLink5, imageLink6 });
       })
-      const { name } = cars[0];
       this.setState({
           carDesc: cars[0]
         })
