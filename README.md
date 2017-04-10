@@ -1,13 +1,13 @@
 # WebTask
-A week-long challenge and educational experience, provided by TangoCode, to learn React JS and replicate the form and function outlined through screenshots of an existing web responsive application.
+A week-long challenge and educational experience, provided by TangoCode, to learn React JS and replicate the form and function outlined through screenshots of an existing web responsive application. The database behind it all is Firebase. There's a very small set of data that doesn't really need a backend, but for demonstration purposes it's hooked up and the app is pulling down all vehicle data from it.
 
 ## Getting started
 The web app is up on Heroku, so if you'd like to check the app out on your mobile devices, just head over to the following link:
-```
-https://secret-chamber-82310.herokuapp.com/app
-```
 
-###Want to run it yourself locally? No worries! Simply:
+[LINK TO WEBAPP](https://secret-chamber-82310.herokuapp.com/app).
+
+
+### Want to run it yourself locally? No worries! Simply:
 1. Clone the repository into a local directory.
 1. Navigate to said directory on the command line, and at the root type:
       ```
@@ -17,8 +17,13 @@ https://secret-chamber-82310.herokuapp.com/app
       ```
       npm start
       ```
-##Why Isn't It There A Nice Optimized Build?
+## Why Isn't There A Nice Optimized Build?
 Good question! React is new for me and I wanted to dive into the code straight away so I used create-react-app, the new-ish officially supported way to create a single-page React application that requires no configuration. It uses both Webpack and Babel under the hood so you can focus on the code. When you're ready, though, you can always eject the app and gain access to the previously hidden config and build tools. I'd like to continue working on and optimizing this application, since I felt like I was a little coarse in my implementation, so I wanted to keep from ejecting just yet. If you'd prefer an optimized build, however, I can set it up.
 
-##Notes:
+## Improvements/To Dos
+1. More responsive: Given more time I'd like to make the application more responsive to different devices. With the current time constraints I was only able to ensure proper display for Samsung Galaxy S5/S6 phones.
+2. Refactoring and Optimization: There are some sections that were brute-forced for the sake of completion that I'd like to go back and make more reusable and streamlined. The way that data is pulled down from the database and passed around the application, for instance, is coarse.
+3. React-Redux Store: I had begun to play around with trying to implement a global store through react-redux. It would've made the application flow much better for the components to have access to pertinent data and bound actions. Given more time I'd like to move forward with that.
+
+## Notes:
 Regardless of how your evaluation turns out, thanks for the opportunity to interview with TangoCode. Coming in for the on-site interview and meeting the staff was one of the friendliest interview experiences I've had thus far.
