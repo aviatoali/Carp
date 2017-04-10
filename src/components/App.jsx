@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { firebaseApp, carRef, uploadRef } from '../firebase';
 import Header from './Header';
 import CarDetail from './CarDetail';
+import Footer from './Footer';
+import '../stylesheets/App.css';
 
 firebaseApp.auth().signInWithEmailAndPassword("admin@mail.com", "admin1");
 
@@ -45,14 +47,10 @@ class App extends Component {
         const { name, year, minPrice, maxPrice, mileage, itemNumber, vinNumber, pageViews, pageShares, pageSaves, safetyRating, paint, condition, auxPort, cylinders, cityMpg, highwayMpg, engine, imageLink1, imageLink2, imageLink3, imageLink4, imageLink5, imageLink6 } = car.val();
         cars.push({ name, year, minPrice, maxPrice, mileage, itemNumber, vinNumber, pageViews, pageShares, pageSaves, safetyRating, paint, condition, auxPort, cylinders, cityMpg, highwayMpg, engine, imageLink1, imageLink2, imageLink3, imageLink4, imageLink5, imageLink6 });
       })
-      console.log("cars", cars);
       const { name } = cars[0];
-      console.log('name', name);
       this.setState({
           carDesc: cars[0]
         })
-      console.log('this.state', this.state);
-      console.log('this.state.name', this.state.name);
     })
   }
 
@@ -61,6 +59,7 @@ class App extends Component {
       <div>
         <Header />
         <CarDetail carDesc={this.state.carDesc} />
+        <Footer />
       </div>
     );
   }

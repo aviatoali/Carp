@@ -1,15 +1,16 @@
 body {
   font: "Helvetica Neue";
   background-color: #EFEFF2;
+  padding: 0;
+  width: 1024px;
+  margin: auto;
 }
+
+/* CarDetails */
 
 .main-Image {
   width: 728px;
   float: left;
-}
-
-.share-link {
-  font-size: 14px;
 }
 
 .upper-section {
@@ -29,77 +30,93 @@ body {
 .car-desc-top {
   display: inline-block;
   width: 296px;
+  height: 546px; /*Instructions specify 432 height, but the combined size of all the elements already exceeds that*/
+  background-color: #FFFFFF;
 }
 
 .car-desc-info-table {
   margin-left: 40px;
+  margin-top: 0px;
 }
 
 .car-desc-info-label {
   font-size: 14px;
   margin-bottom: 8px;
+  margin-top: 0px;
   color: #9B9B9B;
+}
+
+.car-desc-info-table-lower {
+  margin-left: 40px;
+  margin-top: 32px;
 }
 
 .car-desc-info-entry {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 16px;
+  margin-top: 0px;
 }
 
-.car-desc-item-number {
-  margin-top: 32px;
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #9B9B9B;
-}
-
-.car-desc-vin-number {
-  margin-bottom:32px;
-  font-size: 14px;
-  color: #9B9B9B;
+.car-desc-share-section {
+  margin-top: 24px;
+  width: 120px;
 }
 
 .car-desc-share-label {
   font-size: 14px;
-  margin-bottom: 32px;
+  margin-top: 0px;
   display: inline-block;
 }
 
 .share-link {
-  margin-left: 15px;
   display: inline-block;
+  float:right;
   font-size: 14px;
   color: #000000;
 }
 
-.web-page-info-label {
+.web-page-info-table {
+  margin-top: 32px;
+}
+
+.web-page-info {
   display: inline-block;
-  margin-right: 30px;
-  color: #9B9B9B;
-  font-size: 14px;
+  margin-right: 40px;
 }
 
 .web-page-info-entry {
   text-align: center;
   font-size: 20px;
   color: #106838;
+  margin: 0;
 }
 
 /*CarDetailImageGallery*/
 
 .middle-section {
+  background-color: #EFEFF2;
+  padding-bottom: 24px;
+}
 
+.call-button-mobile {
+  display: none;
+  height: 50px;
+  width: 100%;
+  font-weight: 700px;
+  font-size: 36px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #3FB34A;
 }
 
 .gallery-bar {
   padding-top: 32px;
   display: inline-block;
-  padding-bottom: 24px;
 }
 
 .gallery-bar-frame {
-  height: 200px;
+  height: 220px;
   width: 169px;
   display: inline-block;
   overflow: hidden;
@@ -118,6 +135,7 @@ body {
 .car-desc-bot {
   margin-right: 28px;
   margin-left: 28px;
+
   /*Instructions call for 32px
     margins, however, that causes
     the width of combined elements
@@ -125,19 +143,15 @@ body {
     taken from each margin to fix the problem*/
 }
 
-.car-desc-exterior-group {
-  background-color: #FFFFFF;
-  display: inline-block;
-  height: 330px;
-  width: 480px;
-  margin-right:8px;
-}
-
-.car-desc-performance-group {
+.car-desc-lower-group {
   background-color: #FFFFFF;
   display: inline-block;
   height: 330px; /*Instructions said 266 max height, but the combination of the other elements' heights exceeded 266px*/
   width: 480px;
+}
+
+.car-desc-lower-group:not(:last-child) {
+  margin-right: 8px;
 }
 
 .car-desc-lower-category {
@@ -146,7 +160,7 @@ body {
   font-size: 20px;
   margin-top: 40px;
   margin-left: 40px;
-  margin-bottom: 8px; /*to accomodate the 16px requirement for the next element*/
+  margin-bottom: 8px;
 }
 
 .safety-star {
@@ -161,7 +175,7 @@ body {
 }
 
 .car-desc-lower-rows:nth-child(-n+4) {
-  border-bottom: 1px solid #9B9B9B;
+  border-bottom: 1px solid #EFEFF2;
 }
 
 .car-desc-lower-label {
@@ -172,7 +186,142 @@ body {
 }
 
 .car-desc-lower-entry {
-  color: #000000;
+  color: #343434;
   font-size: 18px;
   display: inline-block;
+}
+
+.mobile-image-scroller {
+  display: none;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    body {
+      width: 100%;
+      margin: 0;
+    }
+
+    .main-Image {
+      display: none;
+    }
+
+    .gallery-bar {
+      display: none;
+    }
+
+    .call-button {
+      display: block;
+    }
+
+    .car-desc-top {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    .car-desc-info-table {
+      display: inline-block;
+      width:45%;
+    }
+
+    .car-desc-info-table-lower {
+      width:45%;
+      display: inline-block;
+    }
+
+    .car-name {
+      font-weight: 700;
+      font-size: 60px;
+      margin-top: 32px;
+      /*margin-bottom: 32px;  specs asked for 32px */
+    }
+
+    .car-desc-info-label {
+      color: #9B9B9B;
+      margin-top: 0px;
+      margin-bottom: 8px;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .car-desc-info-entry {
+      margin-top: 0px;
+      margin-bottom: 10px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+
+    .web-page-info-entry {
+      color: #106838;
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0;
+      text-align: center;
+    }
+
+    .car-desc-share-section {
+      width: 220px;
+      margin-top: 24px;
+    }
+
+    .car-desc-share-label {
+      display: inline-block;
+      font-size: 28px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .call-button-mobile {
+      display: block;
+    }
+
+    .car-desc-bot {
+      margin-right: 0px;
+      margin-left: 0px;
+      margin-top: 24px;
+    }
+    .car-desc-lower-group {
+      margin-right: 0px;
+      padding-bottom: 40px;
+      height: auto;
+      width:100%;
+    }
+
+    .car-desc-lower-group:not(:last-child){
+      margin-bottom: 16px;
+    }
+
+    .car-desc-lower-category {
+      color: #343434;
+      font-size: 48px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 8px;
+      margin-left: 40px;
+    }
+
+    .car-desc-lower-label {
+      color: #343434;
+      font-size: 32px;
+      font-weight: 500;
+      width: 230px;
+      display: inline-block;
+    }
+
+    .car-desc-lower-entry {
+      color: #000000;
+      margin-left: 45%;
+      font-size: 36px;
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    .mobile-image-scroller {
+      display: inline-block;
+    }
+
 }

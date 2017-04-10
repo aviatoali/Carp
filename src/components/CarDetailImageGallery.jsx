@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import '../stylesheets/CarDetail.css';
 
 class CarDetailImageGallery extends Component {
-//http://www.cheapusedcars4sale.com/images/Used-Cars-for-Sale/386425/Fiat-500-2012-386425-extra-1.JPG
-//  src={require(this.props.carDesc.imageLink1)}
   render(){
     return(
       <div className="gallery-bar">

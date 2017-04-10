@@ -58,7 +58,7 @@ class CarDetailLowerInfo extends Component {
   render() {
       return (
         <div className="car-desc-bot">
-          <div className="car-desc-exterior-group">
+          <div className="car-desc-lower-group">
             <div className="car-desc-lower-category"> EXTERIOR </div>
             <div className="car-desc-lower-rows">
               <div className="car-desc-lower-label"> Safety Rating </div>
@@ -85,7 +85,7 @@ class CarDetailLowerInfo extends Component {
               </div>
             </div>
           </div>
-          <div className="car-desc-performance-group">
+          <div className="car-desc-lower-group">
             <div className="car-desc-lower-category"> PERFORMANCE </div>
             <div className="car-desc-lower-rows">
               <div className="car-desc-lower-label"> Cylinders </div>
